@@ -53,4 +53,7 @@ COPY --from=build /app .
 # and https://github.com/dotnet/dotnet-docker/discussions/4764
 USER $APP_UID
 
+# Step 7: Expose port 80 in the container
+EXPOSE 80
+
 ENTRYPOINT ["dotnet", "EmployeeAPI_Version1.dll"]
